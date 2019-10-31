@@ -1,0 +1,8 @@
+/packages
+/satgen/bin
+/satgen/obj
+/.vs
+/satgen/*.user
+/satgen/packages
+/satgen/.vs/Racelogic.Gnss.SatGen.BlackBox/v15/*.suo
+/satgen/.vs

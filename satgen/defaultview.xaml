@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="Racelogic.Gnss.SatGen.BlackBox.DefaultView" MinWidth="420" MinHeight="100" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006">
+  <Grid Margin="5">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <ProgressBar Grid.Row="0" Height="25" Minimum="0" Maximum="1" Value="{Binding Path=Progress}" />
+    <TextBlock Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding ProgressMessage}" />
+    <Button Name="CancelButton" Content="Cancel" Grid.Row="2" MinWidth="75" Height="23" HorizontalAlignment="Center" Margin="8" Click="OnCancelButtonClick" />
+  </Grid>
+</UserControl>

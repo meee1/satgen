@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{F0F054C3-BD73-4E3C-8A71-4B608B596302}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
+    <OutputType>Exe</OutputType>
+    <LangVersion>7.3</LangVersion>
+    <AssemblyName>Racelogic.Gnss.SatGen.BlackBox</AssemblyName>
+    <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>satgen.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony, Version=1.2.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Lib.Harmony.1.2.0.1\lib\net472\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <HintPath>C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\PresentationFramework\v4.0_4.0.0.0__31bf3856ad364e35\PresentationFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System\v4.0_4.0.0.0__b77a5c561934e089\System.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <HintPath>C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\WindowsBase\v4.0_4.0.0.0__31bf3856ad364e35\WindowsBase.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xaml">
+      <HintPath>C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Xaml\v4.0_4.0.0.0__b77a5c561934e089\System.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="Racelogic.WPF.Controls">
+      <HintPath>C:\Program Files\Racelogic\SatGen3\Racelogic.WPF.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <HintPath>C:\WINDOWS\Microsoft.NET\assembly\GAC_32\PresentationCore\v4.0_4.0.0.0__31bf3856ad364e35\PresentationCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Racelogic.Utilities.Win">
+      <HintPath>C:\Program Files\Racelogic\SatGen3\Racelogic.Utilities.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="Racelogic.Gnss">
+      <HintPath>C:\Program Files\Racelogic\SatGen3\Racelogic.Gnss.dll</HintPath>
+    </Reference>
+    <Reference Include="Racelogic.Gnss.SatGen">
+      <HintPath>C:\Program Files\Racelogic\SatGen3\Racelogic.Gnss.SatGen.dll</HintPath>
+    </Reference>
+    <Reference Include="Racelogic.DataTypes">
+      <HintPath>C:\Program Files\Racelogic\SatGen3\Racelogic.DataTypes.dll</HintPath>
+    </Reference>
+    <Reference Include="Racelogic.Geodetics">
+      <HintPath>C:\Program Files\Racelogic\SatGen3\Racelogic.Geodetics.dll</HintPath>
+    </Reference>
+    <Reference Include="Racelogic.Gnss.LabSat">
+      <HintPath>C:\Program Files\Racelogic\SatGen3\Racelogic.Gnss.LabSat.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+      <HintPath>C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\System.Core\v4.0_4.0.0.0__b77a5c561934e089\System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Racelogic.WPF.Utilities">
+      <HintPath>C:\Program Files\Racelogic\SatGen3\Racelogic.WPF.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="Racelogic.Maths">
+      <HintPath>C:\Program Files\Racelogic\SatGen3\Racelogic.Maths.dll</HintPath>
+    </Reference>
+    <Reference Include="Racelogic.Utilities">
+      <HintPath>C:\Program Files\Racelogic\SatGen3\Racelogic.Utilities.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DefaultView.cs">
+      <DependentUpon>defaultview.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Racelogic.Gnss.SatGen.BlackBox.Properties\Resources.cs" />
+    <Compile Include="Racelogic.Gnss.SatGen.BlackBox.Properties\Settings.cs" />
+    <Compile Include="Racelogic.Gnss.SatGen.BlackBox\App.cs" />
+    <Compile Include="Racelogic.Gnss.SatGen.BlackBox\AttenuationMultiValueConverter.cs" />
+    <Compile Include="Racelogic.Gnss.SatGen.BlackBox\ConfigFile.cs" />
+    <Compile Include="Racelogic.Gnss.SatGen.BlackBox\ConnectionStatus.cs" />
+    <Compile Include="Racelogic.Gnss.SatGen.BlackBox\SatelliteDefinition.cs" />
+    <Compile Include="Racelogic.Gnss.SatGen.BlackBox\SatelliteGroup.cs" />
+    <Compile Include="Racelogic.Gnss.SatGen.BlackBox\SimulationViewModel.cs" />
+    <Compile Include="Racelogic.Gnss.SatGen.BlackBox\TrajectorySource.cs" />
+    <Compile Include="RealTimeView.cs">
+      <DependentUpon>realtimeview.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="satgen.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="C:\Users\mich1\Desktop\Hex\satgen\satgen\satgen\TEST\defaultview.xaml" />
+    <Page Include="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="C:\Users\mich1\Desktop\Hex\satgen\satgen\satgen\TEST\realtimeview.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="profileedit.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
